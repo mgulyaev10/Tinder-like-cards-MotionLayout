@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Tinder Cards Sample</string>
+
+    <string name="title">GitHub repositories search</string>
+    <string name="type_repository_name">Type repository name</string>
+    <string name="search">Search</string>
+    <string name="error">Error</string>
+    <string name="back">Back</string>
+    <string name="retry">Retry</string>
+    <string name="loading">Loading</string>
+    <string name="no_results">There are no more results.\nTry to look for repos with another name</string>
+    <string name="error_connection">Connection error. Retry or try again later</string>
+
+</resources>

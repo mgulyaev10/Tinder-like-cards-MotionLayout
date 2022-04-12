@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:strokeColor="@color/gray_card_bg"
+    app:cardCornerRadius="16dp"
+    app:strokeWidth="2dp"
+    android:background="@color/transparent"
+    app:cardBackgroundColor="@color/white"
+    app:cardElevation="0dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:paddingBottom="12dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/card_image"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="12dp"
+            app:placeholderImage="@drawable/ic_baseline_person_24"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/card_fork_icon"
+            app:layout_constraintHeight_percent="0.85"/>
+
+        <TextView
+            android:id="@+id/card_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            android:textSize="16sp"
+            style="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintTop_toBottomOf="@id/card_image"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/watchers_barier"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintVertical_bias="0.8"
+            tools:text="Ivan Popojnklnkijimjklgergergerger;jl;jmkl;v"/>
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/watchers_barier"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            app:layout_constraintStart_toStartOf="@id/card_watchers_text"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <ImageView
+            android:id="@+id/card_watchers_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="24dp"
+            android:importantForAccessibility="no"
+            app:srcCompat="@drawable/ic_watchers_24"
+            app:layout_constraintBottom_toTopOf="@id/card_watchers_text"
+            app:layout_constraintEnd_toStartOf="@id/fork_barier" />
+
+        <TextView
+            android:id="@+id/card_watchers_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintStart_toStartOf="@id/card_watchers_icon"
+            app:layout_constraintEnd_toEndOf="@id/card_watchers_icon"
+            app:layout_constraintTop_toBottomOf="@id/card_watchers_icon"
+            tools:text="1000000"/>
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/fork_barier"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            app:layout_constraintStart_toStartOf="@id/card_fork_text"
+            app:layout_constraintBottom_toBottomOf="parent" />
+        
+        <ImageView
+            android:id="@+id/card_fork_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:importantForAccessibility="no"
+            android:layout_marginEnd="12dp"
+            app:srcCompat="@drawable/ic_gitfork_24"
+            app:layout_constraintBottom_toTopOf="@id/card_fork_text"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/card_fork_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintStart_toStartOf="@id/card_fork_icon"
+            app:layout_constraintEnd_toEndOf="@id/card_fork_icon"
+            app:layout_constraintTop_toBottomOf="@id/card_fork_icon"
+            tools:text="10000"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/card_view_like_icon"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:importantForAccessibility="no"
+            android:alpha="0"
+            app:tint="@color/green_like"
+            app:srcCompat="@drawable/ic_heart_64"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/card_view_dislike_icon"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:importantForAccessibility="no"
+            android:alpha="0"
+            app:srcCompat="@drawable/ic_heart_broken_64"
+            app:tint="@color/red_dislike"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
